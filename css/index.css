@@ -744,9 +744,39 @@ ul.productoropa .rosadoprecio{
 .piedepagina{
     background-color: #3c122f;
     color: #fff;
+    text-align: center;
 }
 
+div.redessociales ul {
+    list-style-type: none;
+}
 
+.redessociales li{
+    color: #fff;
+    display: inline;
+    padding: 8px;
+}
+
+.fab.fa-facebook, .fab.fa-twitter, .fab.fa-instagram, .fab.fa-linkedin-in{
+    color: #fff;
+}
+
+.fab.fa-facebook:hover, .fab.fa-twitter:hover, .fab.fa-instagram:hover, .fab.fa-linkedin-in:hover{
+    color: #C82A96;
+}
+
+.creador p a{
+    color: #fff;
+}
+
+.creador p a:hover{
+    color: #C82A96;
+}
+
+.copyright{
+    padding-top: 6px;
+    font-size: 18px;
+}
 /*----------------------------------------------------------------------Consultas de medios----------------------------------------------------------------------*/
 
 @media screen and (max-width:475px){
