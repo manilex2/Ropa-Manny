@@ -1,0 +1,927 @@
+/*--------------------------------------------------------------Caracteristicas principales----------------------------------------------------------------------*/
+
+/*Colores del tema
+#FFFFFF
+#E274BF
+#C82A96
+#721855
+#3C122F*/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: "Esteban", Arial, Helvetica, sans-serif;
+    height: 100%;
+    font: 18px;
+}
+
+.fila::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"]{
+    width: 100%;
+    float: left;
+    padding: 2%;
+}
+
+#principal{
+    transition: margin-left .5s;
+    padding: 0;
+}
+
+.pegajosa + .contenido{
+    padding-top: 80px;
+}
+
+/*------------------------------------------------------------------------Encabezado--------------------------------------------------------------------------*/
+.encabezado{
+    padding: 16px;
+    background-color: #3c122fec;
+    color: #ffffff;
+}
+
+.titulo{
+    font-family: "Audiowide", Arial, Helvetica, sans-serif;
+    font-size: 3.5rem;
+}
+
+.subtitulo{
+    font-family: "Calligraffitti", Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+
+/*-------------------------------------------------------------------Barra de Navegacion----------------------------------------------------------------------*/
+
+/*Estilos de la barra*/
+.navbarra{
+    overflow: hidden;
+    background-color: #3C122F;
+}
+
+.navbarra .enlacesnav.icono{
+    display: none;
+}
+
+/*La clase pegajosa se agrega a la barra cuando llega al desplazamiento indicado*/
+.pegajosa{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+/*----------------------------------------------------------------------Enlaces Principales------------------------------------------------------------------*/
+
+/*Enlaces de la barra*/
+.navbarra a.enlacesnav {
+    float: left;
+    display: block;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.6s;
+}
+.navbarra a.enlacesnav.enlacecont {
+    float: left;
+    display: block;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.6s;
+}
+
+.navbarra a.enlacesnav:hover{
+    background-color: #E274BF;
+    color: #FFFFFF;
+}
+
+.navbarra a.enlacesnav.activo{
+    background-color: #C82A96;
+    color: white;
+}
+
+/*-------------------------------------------------------------------Enlaces Busqueda--------------------------------------------------------------------------*/
+
+.navbarra .contenedorbusqueda{
+    float: right;
+}
+
+.navbarra .contenedorbusqueda input[type=search]{
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 18px;
+    border: none;
+}
+
+.navbarra .contenedorbusqueda button{
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #721855;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+.navbarra .contenedorbusqueda button:hover{
+    background-color: #E274BF;
+    cursor: pointer;
+}
+
+.navbarra .contenedorbusqueda .busquedacampo{
+    display: none;
+}
+
+.busquedacampo.agregar{
+    animation: minuevaanimacion 1s ease-in-out;
+}
+
+@-webkit-keyframes minuevaanimacion{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+@keyframes minuevaanimacion{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+/*---------------------------------------------------------------------Enlace carrito de compra-------------------------------------------------------------*/
+.navbarra a.carrocompra button{
+    float: right;
+    display: block;
+    color: #FFFFFF;
+    margin-right: 16px;
+    background-color: #C82A96;
+    border: 2px solid #FFFFFF;
+    border-radius: 8px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.6s;
+}
+
+.navbarra a.carrocompra button:hover{
+    background-color: #E274BF;
+    cursor: pointer;
+}
+
+/*---------------------------------------------------------------------Enlaces Elementos Hijos----------------------------------------------------------------*/
+
+.navbarra .enlacesnavdespl{
+    float: left;
+    overflow: hidden;
+}
+
+.navbarra .enlacesnavdespl .enlacesnav.enlacecont{
+    float: none;
+    display: block;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.6s;
+}
+
+.enlacesnavcontenido a:hover{
+    background-color: #E274BF;
+}
+
+a.enlacecont:hover{
+    background-color: #E274BF;
+}
+
+.enlacesnavcontenido{
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    transition: 0.6s;
+}
+
+.enlacesnavcontenido a{
+    float: none;
+    color: #FFFFFF;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    background-color: #3C122F;
+    transition: 0.6s;
+}
+
+/*----------------------------------------------------------------------------Login---------------------------------------------------------------------------*/
+.inputusuario, .inputcontra{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+}
+
+.enviarformlogin, button.cancelarboton{
+    color: #ffffff;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.enviarformlogin{
+    background-color: #3C122F;
+}
+
+.enviarformlogin:hover,.cancelarboton:hover{
+    opacity: 0.8;
+}
+
+.cancelarboton{
+    width: auto;
+    padding: 10px 18px;
+    background-color: #C82A96;
+}
+
+.imgcontenedor{
+    text-align: center;
+    margin: 25px 0 12px 0;
+    position: relative;
+}
+
+img.avatar{
+    width: 20%;
+    border-radius: 50%;
+    opacity: 0.7;
+    height: 10%;
+}
+
+.formcontenedorlogin{
+    padding: 16px;
+}
+
+span.olvidocontra{
+    float: right;
+    padding-top: 16px;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #3c122f;
+    background-color: #3c122fc5;
+    padding-top: 10px;
+}
+
+.modal-contenido{
+    background-color: #f1f1f1cc;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.cerrar{
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.cerrar:hover, .cerrar:focus{
+    color: #C82A96;
+    cursor: pointer;
+}
+
+.animado{
+    -webkit-animation: animacionzoom 0.6s;
+    animation: animacionzoom 0.6s;
+}
+
+@-webkit-keyframes animacionzoom{
+    from{transform: scale(0);}
+    to{transform: scale(1);}
+}
+
+@keyframes animacionzoom{
+    from{transform: scale(0);}
+    to{transform: scale(1);}
+}
+
+/*------------------------------------------------------------------------Registro----------------------------------------------------------------------------*/
+.formcontenedorregistro .enviarformregistro{
+    background-color: #3C122F;
+    color: #ffffff;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.formcontenedorregistro .enviarformregistro:hover{
+    opacity: 0.8;
+}
+
+.formcontenedorregistro .fa-male{
+    color: dodgerblue;
+    font-size: 1.6rem;
+}
+
+.formcontenedorregistro .fa-female{
+    color: #C82A96;
+    font-size: 1.6rem;
+}
+
+.formcontenedorregistro input[type=text], input[type=number], input[type=email], input[type=tel], input[type=password]{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #ffffff;
+  }
+
+.formcontenedorregistro input[type=text], input[type=number], input[type=email], input[type=tel], input[type=password]{
+    border: 1px solid #C82A96;
+}
+
+.formcontenedorregistro select{
+    width: 100%;
+    padding: 15px 100px 15px 0px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #ffffff;
+    text-align: left;
+  }
+
+.formcontenedorregistro{
+    padding: 16px;
+}
+
+.modal2{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #3c122fea;
+    padding-top: 10px;
+}
+
+.formcontenedorregistro hr{
+    border: 3px solid #3c122f;
+}
+
+.contenedorcerrar{
+    text-align: center;
+    margin: 25px 0 12px 0;
+    position: relative;
+}
+
+#mensaje{
+    display: none;
+    background-color: #3c122f;
+    color: #FFFFFF;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+#mensaje p{
+    padding: 10px 35px;
+    font-size: 18px;
+}
+
+.valido {
+    color: green;
+}
+
+.valido:before{
+    position: relative;
+    left: -35px;
+    content: "✔";
+}
+
+.invalido{
+    color:red;
+}
+
+.invalido:before{
+    position: relative;
+    left: -35px;
+    content: "✖";
+}
+
+/*-----------------------------------------------------------------------Barra Lateral--------------------------------------------------------------------------*/
+aside.barralateral{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #3c122f;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+aside.barralateral li a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #000;
+    display: block;
+    transition: 0.3s;
+}
+
+aside.barralateral a:hover{
+    color: #000;
+
+}
+
+aside.barralateral .cerrarbotonlateral{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 35px;
+    margin-left: 50px;
+    color: #ffffff;
+}
+
+aside div.panel{
+    background-color: #E274BF;
+}
+
+aside div.panel ul li{
+    list-style-type: none;
+}
+
+aside.barralateral .enlacesbarralateral button.acordeon{
+    background-color: #C82A96;
+    color: #FFF;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: 0.4s;
+}
+
+aside.barralateral .enlacesbarralateral button.acordeon a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+aside.barralateral .enlacesbarralateral button.acordeon-no a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+aside.barralateral .enlacesbarralateral button.acordeon.activar, aside.barralateral .enlacesbarralateral button.acordeon-no:hover, aside.barralateral .enlacesbarralateral button.acordeon:hover{
+    background-color: #721855;
+}
+
+aside.barralateral .enlacesbarralateral .panel{
+    padding: 0 18px;
+    background-color: #E274BF;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.barralateral a{
+    text-decoration: none;
+    color: #fff;
+}
+
+aside.barralateral .enlacesbarralateral button.acordeon-no{
+    background-color: #C82A96;
+    color: #FFF;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: 0.4s;
+}
+
+/*---------------------------------------------------------------------Diapositiva de Imagenes----------------------------------------------------------------*/
+.contenedor-diapositivas{
+    max-width: 1280px;
+    position: relative;
+    margin: auto;
+    z-index: 0;
+}
+
+.desvanecer{
+    -webkit-animation-name: desvanecer;
+    -webkit-animation-duration: 1.8s;
+    animation-name: desvanecer;
+    animation-duration: 1.8s;
+}
+
+@-webkit-keyframes desvanecer{
+    from{opacity: .4;}
+    to{opacity: 1;}
+}
+
+@keyframes desvanecer{
+    from{opacity: .4;}
+    to{opacity: 1;}
+}
+
+.contenidodiapositivas{
+    position: absolute;
+    bottom: 8px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 8px 12px;
+    text-align: center;
+}
+
+/*------------------------------------------------------------------------Contenido Página-------------------------------------------------------------------*/
+/*Whatsapp---------------------------------------------------------------------------------------------------------------------------------------------------*/
+.whatsapp{
+    padding: 16px;
+    font-size: 35px;
+    text-align: center;
+    background-color: #3c122f;
+}
+
+.whatsapp a{
+    color: #25d366;
+}
+
+.whatsapp a:hover{
+    color: #fff;
+}
+/*Contenido Destacado-------------------------------------------------------------------------------------------------------------------------------------------*/
+.contenidodestacado{
+    position: relative;
+    text-align: center;
+}
+
+.textoizquierdamedio{
+    position: absolute;
+    left: 16px;
+    top: 120px;
+    background-color: #3C122F;
+    color: #ffffff;
+    padding: 16px;
+}
+
+.contenidodestacado .col-6 img{
+    height: 600px;
+    width: 500px;
+}
+
+.textovolteado{
+    transform: rotate(270deg);
+    position: absolute;
+    right: 600px;
+    top: 250px;
+    /*background-color: #3C122F;
+    color: #ffffff;*/
+    padding: 16px;
+    font-size: 1.5rem;
+}
+
+.superposicion1{
+    position: absolute;
+    top: 250px;
+    left: 145px;
+    background-color: #3c122f9f;
+    color: #ffffff;
+    width: 500px;
+    transition: .5s ease;
+    opacity: 0;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.contenidodestacado .col-6 button{
+    color: #FFFFFF;
+    margin-right: 16px;
+    background-color: #C82A96;
+    border: 2px solid #FFFFFF;
+    border-radius: 8px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.6s;
+}
+
+.superposicion2{
+    position: absolute;
+    top: 250px;
+    right: 145px;
+    background-color: #3c122f9f;
+    color: #ffffff;
+    width: 500px;
+    transition: .5s ease;
+    opacity: 0;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+/*Datos Importantes---------------------------------------------------------------------------------------------------------------------------------------------*/
+.datosimportantes .col-3{
+    background-color: #3c122f;
+    color: #ffffff;
+}
+
+.datosimportantes .col-3 h3{
+    font-size: 1.5rem;
+    font-family: "Jura", Arial, Helvetica, sans-serif;
+}
+
+/*--------------------------------------------------------------------------Slider Productos---------------------------------------------------------------------*/
+.productosprincipal{
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
+.sliderprincipal{
+    display: inline-flex;
+    -moz-animation: slider 60s infinite linear;
+    -webkit-animation: slider 60s infinite linear;
+    animation: slider 60s infinite linear;
+    height: 100%;
+    width: auto;
+}
+
+@keyframes slider {
+    to {
+        -moz-transform: translateX(-74%);
+        -webkit-transform: translateX(-74%);
+        transform: translateX(-74%);
+    }
+}
+
+ul.productoropa{
+   list-style-type: none;
+   border: 1px solid #eee;
+   margin: 0;
+   padding: 0;
+   -webkit-transition: 0.3s;
+   transition: 0.3s;
+}
+
+ul.productoropa:hover{
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.4);
+}
+
+ul.productoropa li.encabezadoproducto{
+    font-weight: bold;
+    color: #000;
+    font-size: 30px;
+}
+
+.productoropa1 {
+    padding: 8px;
+    float: left;
+}
+
+ul.productoropa li{
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+}
+
+ul.productoropa .rosadoprecio{
+    font-size: 20px;
+    color: rgb(112, 112, 112);
+}
+
+.botonproducto{
+    background-color: #C82A96;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+.botonproducto:hover{
+    background-color: #c82a96ad;
+}
+
+/*----------------------------------------------------------------------Pie de pagina----------------------------------------------------------------------------*/
+.piedepagina{
+    background-color: #3c122f;
+    color: #fff;
+}
+
+
+/*----------------------------------------------------------------------Consultas de medios----------------------------------------------------------------------*/
+
+@media screen and (max-width:475px){
+    .navbarra a.carrocompra button, .navbarra .contenedorbusqueda{
+        width: 90%;
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (min-width:700px){
+    .enlacesnavdespl:hover .enlacesnavcontenido{
+        display: block;
+    }
+    .dispeq{
+        display: none;
+    }
+
+    .col-1{width: 8.33%;}
+    .col-2{width: 16.66%;}
+    .col-3{width: 25%;}
+    .col-4{width: 33.33%;}
+    .col-5{width: 41.66%;}
+    .col-6{width: 50%;}
+    .col-7{width: 58.33%;}
+    .col-8{width: 66.66%;}
+    .col-9{width: 75%;}
+    .col-10{width: 83.33%;}
+    .col-11{width: 91.66%;}
+    .col-12{width: 100%;}
+
+    .contenidodestacado .col-6:hover .superposicion1{
+        opacity: 1;
+    }
+
+    .contenidodestacado .col-6 button:hover{
+        background-color: #E274BF;
+        cursor: pointer;
+    }
+
+    .contenidodestacado .col-6:hover .superposicion2{
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .navbarra a:not(:first-child), .navbarra .contenedorbusqueda input[type=search], .navbarra .contenedorbusqueda button, .navbarra .enlacesnavdespl .enlacesnav.enlacecont, .dispeq{
+        display: none;
+    }
+
+    .navbarra a.enlacesnav.icono{
+        float: right;
+        display: block;
+    }
+
+    .navbarra a.enlacesnav.icono:hover{
+        background-color: #C82A96;
+    }
+
+    span.olvidocontra{
+        display: block;
+        float: none;
+    }
+
+    .cancelarboton, .formcontenedorregistro .enviarformregistro{
+        width: 100%;
+    }
+
+    .pegajosa{
+        position: relative;
+    }
+
+    .navbarra.receptivo div.dispeq{
+        float: none;
+        display: block;
+        transition: 0.6s;
+        padding-left: 20%;
+    }
+
+    .navbarra.receptivo .enlacepeqdis{
+        padding: 2.5%;
+    }
+
+    .navbarra.receptivo div.dispeq a:hover{
+        background-color: #E274BF;
+    }
+
+    .navbarra.receptivo a.dispeq:hover{
+        background-color: #E274BF;
+    }
+
+
+    .dispeq{
+        float: none;
+        color: #FFFFFF;
+        padding: 14px 16px;
+        text-decoration: none;
+        text-align: left;
+        background-color: #3C122F;
+        transition: 0.6s;
+        }
+
+    .dispeq a{
+        text-decoration: none;
+        color: #FFFFFF;
+        float: none;
+        text-align: left;
+        transition: 0.6s;
+    }
+    
+    .a.dispeq:hover{
+        background-color: #E274BF;
+    }
+
+    .navbarra.receptivo{
+        position: relative;
+    }
+
+    .navbarra.receptivo a.enlacesnav.icono{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .navbarra.receptivo a{
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    div.enlacesnavcontenido{
+        display: none;
+        float: none;
+    }
+    
+    .navbarra.receptivo .contenedorbusqueda input[type=search]{
+        float: none;
+        display: inline;
+        text-align: left;
+        margin-left: auto;
+        margin-bottom: 5px;
+    }
+
+    .navbarra.receptivo .contenedorbusqueda button{
+        float: none;
+        display: inline;
+        text-align: left;
+    }
+
+    .navbarra .contenedorbusqueda .busquedacampo{
+        float: left;
+        display: block;
+    }
+
+    .contenidodiapositivas p{
+        display: none;
+    }
+
+    .contenidodestacado .col-6 img{
+        height: 600px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-height:450px){
+    aside.barralateral{
+        padding-top: 15px;
+    }
+    aside.barralateral a{
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-device-width: 1280px) {
+    .fondoimagen1, .fondoimagen2{
+      background-attachment: scroll;
+    }
+}

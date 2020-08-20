@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manny Ropa "Lo mejor de lo mejor"</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Calligraffitti">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Esteban">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jura">
+    <script src="https://kit.fontawesome.com/647c5e73f8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!---------------------------------------------------------------Barra Lateral ----------------------------------------------------------------------------->
+    <aside id="miBarraLateral" class="barralateral">
+        <a href="javascript:void(0)" class="cerrarbotonlateral" onclick="cerrarNavLat()">&times;</a>
+        <div class="enlacesbarralateral">
+            <button class="acordeon">Vestidos para mujer</button>
+            <div class="panel">
+                <ul>
+                    <a href="#"><li><i class="fas fa-female"></i> Cortos Elegantes</li></a>
+                    <a href="#"><li><i class="fas fa-female"></i> Cortos Casuales</li></a>
+                    <a href="#"><li><i class="fas fa-female"></i> Largos Elegantes</li></a>
+                    <a href="#"><li><i class="fas fa-female"></i> Maxidress</li></a>
+                    <a href="#"><li><i class="fas fa-female"></i> --MÁS--</li></a>
+                </ul>
+            </div>
+            <button class="acordeon">Blusas para mujer</button>
+            <div class="panel">
+                <ul>
+                    <a href="#"><li><i class="fas fa-female"></i> Campesinas</li></a>
+                    <a href="#"><li><i class="fas fa-female"></i> Básicas</li></a>
+                    <a href="#"><li><i class="fas fa-female"></i> Camiseras</li></a>
+                    <a href="#"><li><i class="fas fa-female"></i> Tops</li></a>
+                    <a href="#"><li><i class="fas fa-female"></i> Casuales</li></a>
+                    <a href="#"><li><i class="fas fa-female"></i> --MÁS--</li></a>
+                </ul>
+            </div>
+            <button class="acordeon">Sets</button>
+            <div class="panel">
+                <ul>
+                    <a href="#"><li><i class="fas fa-female"></i> Set Pantalon</li></a>
+                    <a href="#"><li><i class="fas fa-female"></i> Set Falda</li></a>
+                    <a href="#"><li><i class="fas fa-female"></i> --MÁS--</li></a>
+                </ul>
+            </div>
+            <button class="acordeon">Pantalones</button>
+            <div class="panel">
+                <ul>
+                    <a href="#"><li><i class="fas fa-female"></i> Shorts</li></a>
+                    <a href="#"><li><i class="fas fa-female"></i> Pantalones Largos</li></a>
+                    <a href="#"><li><i class="fas fa-female"></i> --MÁS--</li></a>
+                </ul>
+            </div>
+            <button class="acordeon-no"><a href="#">Faldas Para Mujer</a></button>
+            <button class="acordeon-no"><a href="#">Nueva Colección</a></button>
+            <button class="acordeon-no"><a href="#">OFERTAS</a></button>
+        </div>
+    </aside>
+    <div id="principal">
+        <!--------------------------------------------------------------------Encabezado----------------------------------------------------------------------------->
+        <header class="encabezado">
+            <h1 class="titulo">MANNY ROPA</h1>
+            <p class="subtitulo">Este es un texto de subtitulo.</p>
+        </header>
+        <!----------------------------------------------------------------Barra de Navegación------------------------------------------------------------------------->
+        <nav class="navbarra" id="barranav">
+            <a class="enlacesnav activo" href="#"><i class="fas fa-home"></i></a>
+            <a href="javascript:void(0)" class="enlacesnav icono" onclick="miFuncionReceptiva()"><i class="fas fa-bars"></i></a>
+            <a class="enlacesnav" href="#"><i class="fas fa-tshirt"></i> Nuestros Productos</a>
+            <a class="dispeq" href="#"><i class="fas fa-archive"></i> Categorias</a>
+            <div class="dispeq">
+                    <a class="enlacepeqdis" href="#">Vestidos para mujer</a>
+                    <a class="enlacepeqdis" href="#">Blusas para mujer</a>
+                    <a class="enlacepeqdis" href="#">Sets</a>
+                    <a class="enlacepeqdis" href="#">Faldas para mujer</a>
+                    <a class="enlacepeqdis" href="#">Pantalones</a>
+                    <a class="enlacepeqdis" href="#">Nueva Colección</a>
+                    <a class="enlacepeqdis" href="#">OFERTAS</a>
+            </div>
+            <a class="dispeq" href="#"><i class="fas fa-user"></i> Mi Cuenta</a>
+            <div class="dispeq">
+                    <a onclick="document.getElementById('id01').style.display='block'" style="width: auto;" class="enlacepeqdis" href="javascript:void(0)">Ingresar</a>
+                    <a class="enlacepeqdis" href="javascript:void(0)" onclick="document.getElementById('id02').style.display='block'">Registrarse</a>
+            </div>
+            <div class="enlacesnavdespl">
+                <a class="enlacesnav enlacecont" href="#"><i class="fas fa-archive"></i> Categorias <i class="fas fa-angle-down"></i></a>
+                <div class="enlacesnavcontenido">
+                    <a href="#">Vestidos para mujer</a>
+                    <a href="#">Blusas para mujer</a>
+                    <a href="#">Sets</a>
+                    <a href="#">Faldas para mujer</a>
+                    <a href="#">Pantalones</a>
+                    <a href="#">Nueva Colección</a>
+                    <a href="#">OFERTAS</a>
+                </div>
+            </div>
+            <div class="enlacesnavdespl">
+                <a class="enlacesnav enlacecont" href="#"><i class="fas fa-user"></i> Mi Cuenta <i class="fas fa-angle-down"></i></a>
+                <div class="enlacesnavcontenido">
+                    <a onclick="document.getElementById('id01').style.display='block'" style="width: auto;" href="javascript:void(0)">Ingresar</a>
+                    <a href="javascript:void(0)" onclick="document.getElementById('id02').style.display='block'">Registrarse</a>
+                </div>
+            </div>
+            <a class="enlacesnav" href="javascript:void(0)" style="cursor: pointer;" onclick="abrirNavLat()">Ver Más <i class="fas fa-hand-point-left"></i></a>
+            <a class="carrocompra" href="#"><button><i class="fas fa-cart-arrow-down"></i> Mi Carrito</button></a>
+            <form class="contenedorbusqueda" action="#" method="GET">
+                <div class="busquedacampo" id="cuadrobusqueda" onfocusout="miFuncionQuitarReceptiva()">
+                    <input id="micuadrobusqueda" type="search" placeholder="Buscar..." name="q">
+                </div>
+                <button id="botonbusqueda" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </nav>
+        <!-----------------------------------------------------------------Login Modal------------------------------------------------------------------------------>
+        <section id="id01" class="modal">
+            <form class="modal-contenido animado" action="#" method="POST">
+                <div class="imgcontenedor">
+                    <span class="cerrar" onclick="document.getElementById('id01').style.display='none'" title="Cerrar Modal">&times;</span>
+                    <img src="image/modelo1.jpg" alt="avatar" class="avatar">
+                </div>
+                <div class="formcontenedorlogin">
+                    <label for="usuario"><b>Usuario</b></label>
+                    <input class="inputusuario" type="text" placeholder="Ingrese su usuario" name="usuario" required>
+                    <label for="contra"><b>Contraseña</b></label>
+                    <input id="contrasena" class="inputcontra" type="password" placeholder="Ingrese su contraseña" name="contra" required>
+                    <button class="enviarformlogin">Login</button>
+                    <label><input class="recordarverifi" type="checkbox" checked name="recuerdame">Recuerdame</label>
+                </div>
+                <div class="formcontenedorlogin" style="background-color: #f1f1f1;">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelarboton">Cancelar</button>
+                    <span class="olvidocontra">¿Olvido su <a href="">contraseña?</a></span>
+                </div>
+            </form>
+        </section>
+        <!--------------------------------------------------------------------Registro------------------------------------------------------------------------------->
+        <section id="id02" class="modal2">
+            <form class="modal-contenido animado" action="#" method="POST">
+                <div class="contenedorcerrar">
+                    <span class="cerrar" onclick="document.getElementById('id02').style.display='none'" title="Cerrar Modal Registro">&times;</span>
+                </div>
+                <div class="formcontenedorregistro">
+                    <h2>Registrarse</h2>
+                    <p>Por favor rellene el formulario de registro para crear su usuario.</p>
+                    <hr/>
+                    <div class="fila">
+                        <div class="col-6">
+                            <label  for="sexo">Sexo:</label><br/><br/>
+                            <input type="radio" name="sexo" value="masculino" required><i class="fas fa-male"></i>
+                            <input type="radio" name="sexo" value="femenino" required><i class="fas fa-female"></i>
+                        </div>
+                        <div class="col-6">
+                            <label for="identificacion">Tipo de Identificación:</label><br/>
+                            <select name="identificacion" required>
+                                <option></option>
+                                <option>CC-Cedula de ciudadania</option>
+                                <option>TI-Tarjeta de identidad</option>
+                                <option>CE-Cedula de extranjeria</option>
+                                <option>NIT-Número de identificación tributario</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="fila">
+                        <div class="col-6">
+                            <label for="numidentificacion">Número de Identificación:</label><br/>
+                            <input name="numidentificacion" placeholder="Introduzca su identificación" type="number" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="nombre">Primer Nombre:</label><br/>
+                            <input type="text" name="nombre" placeholder="Introduzca su primer nombre" required>
+                        </div>
+                    </div>
+                    <div class="fila">
+                        <div class="col-6">
+                            <label for="segnombre">Segundo Nombre:</label><br/>
+                            <input name="segnombre" placeholder="Introduzca su segundo nombre" type="text">
+                        </div>
+                        <div class="col-6">
+                            <label for="apellido">Primer Apellido:</label><br/>
+                            <input type="text" name="apellido" placeholder="Introduzca su primer apellido" required>
+                        </div>
+                    </div>
+                    <div class="fila">
+                        <div class="col-6">
+                            <label for="segapellido">Segundo Apellido:</label><br/>
+                            <input name="segapellido" placeholder="Introduzca su segundo apellido" type="text">
+                        </div>
+                        <div class="col-6">
+                            <label for="direccion">Dirección:</label><br/>
+                            <input type="text" name="direccion" placeholder="Introduzca su dirección" required>
+                        </div>
+                    </div>
+                    <div class="fila">
+                        <div class="col-6">
+                            <label for="departamento">Departamento:</label><br/>
+                            <select name="departamento" required>
+                                <option value=""></option>
+                                <option value="1">AMAZONAS</option>
+                                <option value="2">ANTIOQUIA</option>
+                                <option value="3">ARAUCA</option>
+                                <option value="4">ATLANTICO</option>
+                                <option value="5">BOGOTA</option>
+                                <option value="6">BOLIVAR</option>
+                                <option value="7">BOYACA</option>
+                                <option value="8">CALDAS</option>
+                                <option value="9">CAQUETA</option>
+                                <option value="10">CASANARE</option>
+                                <option value="11">CAUCA</option>
+                                <option value="12">CESAR</option>
+                                <option value="13">CORDOBA</option>
+                                <option value="14">CUNDINAMARCA</option>
+                                <option value="15">CHOCO</option>
+                                <option value="16">GUAINIA</option>
+                                <option value="17">GUAVIARE</option>
+                                <option value="18">HUILA</option>
+                                <option value="19">LA GUAJIRA</option>
+                                <option value="20">MAGDALENA</option>
+                                <option value="21">META</option>
+                                <option value="22">NARINO</option>
+                                <option value="23">NORTE DE SANTANDER</option>
+                                <option value="24">PUTUMAYO</option>
+                                <option value="25">QUINDIO</option>
+                                <option value="26">RISARALDA</option>
+                                <option value="27">SAN ANDRES</option>
+                                <option value="28">SANTANDER</option>
+                                <option value="29">SUCRE</option>
+                                <option value="30">TOLIMA</option>
+                                <option value="31">VALLE DEL CAUCA</option>
+                                <option value="32">VAUPES</option>
+                                <option value="33">VICHADA</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label for="direccion">Municipio:</label><br/>
+                            <select name="municipio" required>
+                                <option value=""></option>
+                                <option value="">Ejemplo1</option>
+                                <option value="">Ejemplo2</option>
+                                <option value="">Ejemplo3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="fila">
+                        <div class="col-6">
+                            <label for="telefono">Teléfono:</label><br/>
+                            <input name="telefono" placeholder="Introduzca su teléfono" type="tel" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="correo">Correo:</label><br/>
+                            <input type="email" name="correo" placeholder="Introduzca su email" required>
+                        </div>
+                    </div>
+                    <div class="fila">
+                        <div class="col-6">
+                            <label for="contrasena">Contraseña:</label><br/>
+                            <input title="Debe contener alguno de los siguientes caracteres especiales . , # $ % * -" id="contra1" name="contrasena" pattern="(?=.{8,16}$)(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[.,#$%*-])(?!.*[¿°¡=!+&^@`~:;/\u0022\u0028\u0029\u005B\u005C\u005D\u007B\u007C\u007D\u003F\u003C\u003E]).*" placeholder="Introduzca su contraseña" type="password" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="confirmar-contrasena">Confirmar Contraseña:</label><br/>
+                            <input id="contra2" type="password" name="confirmar-contrasena" pattern="(?=.{8,16}$)(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[.,#$%*-])(?!.*[¿°¡=!+&^@`~:;/\u0022\u0028\u0029\u005B\u005C\u005D\u007B\u007C\u007D\u003F\u003C\u003E]).*" placeholder="Confirme su contraseña" oninput="miFuncionValidar()" required>
+                        </div>
+                    </div>
+                    <div class="fila">
+                        <div class="col-12">
+                            <input type="checkbox" onclick="mostrarContra()"> ¿Mostrar/Ocultar contraseña?
+                            <div id="mensaje">
+                                <h3>La contraseña debe contener lo siguiente:</h3>
+                                <p id="minuscula" class="invalido">Una letra <b>minúscula</b></p>
+                                <p id="mayuscula" class="invalido">Una letra <b>mayúscula</b></p>
+                                <p id="numero" class="invalido">Un <b>número</b></p>
+                                <p id="longitud" class="invalido">Debe contener entre <b>8 y 16 caracteres</b></p>
+                                <p id="caracteresesp" class="invalido">Debe contener alguno de los siguientes caracteres especiales . , # $ % * -</p>
+                                <p id="coincidir" class="invalido">Deben coincidir la <b>contraseña</b> y la <b>confirmación</b></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fila">
+                        <div class="col-12">
+                            <input name="termcondi" type="checkbox" required>
+                            <label for="termcondi">Entiendo que al registrarme estoy aceptando los <a href="" style="color:dodgerblue">Terminos & Condiciones</a>.</label>
+                    </div>
+                    <hr/>
+                    <div class="fila">
+                        <div class="col-6">
+                            <button name="cancelar" type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelarboton">Cancelar</button>
+                        </div>
+                        <div class="col-6">
+                            <button onclick="return miFuncionValidar();" type="submit" name="enviar" class="enviarformregistro" id="registrarusuario">Registrarse</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <!------------------------------------------------------------Diapositiva de imagenes----------------------------------------------------------------------->
+        <section>
+            <div class="contenedor-diapositivas">
+                <div class="miDiapositiva desvanecer">
+                    <img width="100%" src="image/blusadiapositiva1.jpg"/>
+                    <div class="contenidodiapositivas">
+                        <h1 class="encabezadodiapositivas">50% Descuento</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sem mauris, interdum eu posuere at, tempus ut ipsum. Etiam at tincidunt sem, 
+                            sed eleifend nunc. Maecenas feugiat volutpat mi sit amet mattis. Nunc vulputate, lacus vel scelerisque ullamcorper, metus mi aliquet magna, 
+                            at vehicula nisl risus in quam. Nulla ac commodo leo, vel porttitor orci. Curabitur mattis at nisl vel iaculis. Nam ut mauris non lacus cursus 
+                            ultrices. Aliquam congue dui ut libero dapibus, non mattis neque consequat. Ut nec nibh ac lorem fringilla ornare eu et libero.</p>
+                    </div>
+                </div>
+                <div class="miDiapositiva desvanecer">
+                    <img width="100%" src="image/faldadiapositiva1.jpg"/>
+                    <div class="contenidodiapositivas">
+                        <h1 class="encabezadodiapositivas">¡¡¡APROVECHA YA!!!</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sem mauris, interdum eu posuere at, tempus ut ipsum. Etiam at tincidunt sem, 
+                            sed eleifend nunc. Maecenas feugiat volutpat mi sit amet mattis. Nunc vulputate, lacus vel scelerisque ullamcorper, metus mi aliquet magna, 
+                            at vehicula nisl risus in quam. Nulla ac commodo leo, vel porttitor orci. Curabitur mattis at nisl vel iaculis. Nam ut mauris non lacus cursus 
+                            ultrices. Aliquam congue dui ut libero dapibus, non mattis neque consequat. Ut nec nibh ac lorem fringilla ornare eu et libero.</p>
+                    </div>
+                </div>
+                <div class="miDiapositiva desvanecer">
+                    <img width="100%" src="image/pantalondiapositiva1.jpg"/>
+                    <div class="contenidodiapositivas">
+                        <h1 class="encabezadodiapositivas">50% Descuento</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sem mauris, interdum eu posuere at, tempus ut ipsum. Etiam at tincidunt sem, 
+                            sed eleifend nunc. Maecenas feugiat volutpat mi sit amet mattis. Nunc vulputate, lacus vel scelerisque ullamcorper, metus mi aliquet magna, 
+                            at vehicula nisl risus in quam. Nulla ac commodo leo, vel porttitor orci. Curabitur mattis at nisl vel iaculis. Nam ut mauris non lacus cursus 
+                            ultrices. Aliquam congue dui ut libero dapibus, non mattis neque consequat. Ut nec nibh ac lorem fringilla ornare eu et libero.</p>
+                    </div>
+                </div>
+                <div class="miDiapositiva desvanecer">
+                    <img width="100%" src="image/vestidodiapositiva1.jpg"/>
+                    <div class="contenidodiapositivas">
+                        <h1 class="encabezadodiapositivas">¡¡¡APROVECHA YA!!!</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sem mauris, interdum eu posuere at, tempus ut ipsum. Etiam at tincidunt sem, 
+                            sed eleifend nunc. Maecenas feugiat volutpat mi sit amet mattis. Nunc vulputate, lacus vel scelerisque ullamcorper, metus mi aliquet magna, 
+                            at vehicula nisl risus in quam. Nulla ac commodo leo, vel porttitor orci. Curabitur mattis at nisl vel iaculis. Nam ut mauris non lacus cursus 
+                            ultrices. Aliquam congue dui ut libero dapibus, non mattis neque consequat. Ut nec nibh ac lorem fringilla ornare eu et libero.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--------------------------------------------------------------------Contenido----------------------------------------------------------------------------->
+        <section class="whatsapp">
+            <a href="#"><h2>TE ESCRIBIMOS POR WHATSAPP <i class="fab fa-whatsapp"></i></h2></a>
+        </section>
+        <section class="contenidodestacado fila">
+            <div class="col-6">
+                <img src="image/falda1.jpg"/>
+                <div class="textoizquierdamedio">
+                    <h3>DESTACADOS HOY</h3>
+                </div>
+                <div class="superposicion1">
+                    <p><b>Modelo: </b> Falda</p>
+                    <p><b>Color: </b> Azul/Estampado Plateado</p>
+                    <p><b>Precio: </b> 25$</p>
+                    <a><button>Comprar</button></a>
+                </div>
+            </div>
+            <div class="col-6">
+                <img src="image/vestido2.jpg"/>
+                <div class="textovolteado">
+                    <h2>50% DE DESCUENTO</h2>
+                </div>
+                <div class="superposicion2">
+                    <p><b>Modelo: </b> Vestido</p>
+                    <p><b>Color: </b> Estampado Tigresa</p>
+                    <p><b>Precio: </b> 20$</p>
+                    <a><button>Comprar</button></a>
+                </div>
+            </div>
+        </section>
+        <section class="datosimportantes fila">
+            <div class="col-3">
+                <h3>+10000 CLIENTES <i class="fas fa-user"></i></h3>
+                <p><em>Han confiado en nuestros productos</em></p>
+            </div>
+            <div class="col-3">
+                <h3>+200 MODELOS <i class="fas fa-tshirt"></i></h3>
+                <p><em>Faldas, blusas, vestidos, pantalones & más</em></p>
+            </div>
+            <div class="col-3">
+                <h3>+DESCUENTOS <i class="fas fa-piggy-bank"></i></h3>
+                <p><em>Variedad de descuentos en nuestros productos</em></p>
+            </div>
+            <div class="col-3">
+                <h3>+COMODIDAD <i class="fas fa-laptop-house"></i></h3>
+                <p><em>Compra sin salir de la comodidad de tu casa</em></p>
+            </div>
+        </section>
+        <section class="productosprincipal fila">
+            <div class="sliderprincipal">
+                <div id="producto1" class="col-2 ropaproducto">
+                    <div class="productoropa1">
+                        <ul class="productoropa">
+                            <li><img src="image/slide1.jpg" width="180px" height="220px"/></li>
+                            <li class="encabezadoproducto">Blusa</li>
+                            <li class="rosadoprecio">$9.99</li>
+                            <li>Material: Tela</li>
+                            <li>Color: Blanco</li>
+                            <li>Procedencia: Colombia</li>
+                            <li class="rosaprecio"><a href="#" class="botonproducto">Comprar</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="producto2" class="col-2 ropaproducto">
+                    <div class="productoropa1">
+                        <ul class="productoropa">
+                            <li><img src="image/slide2.jpg" width="180px" height="220px"/></li>
+                            <li class="encabezadoproducto">Blusa</li>
+                            <li class="rosadoprecio">$8.99</li>
+                            <li>Material: Tela</li>
+                            <li>Color: Blanco</li>
+                            <li>Procedencia: Colombia</li>
+                            <li class="rosaprecio"><a href="#" class="botonproducto">Comprar</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="producto3" class="col-2 ropaproducto">
+                    <div class="productoropa1">
+                        <ul class="productoropa">
+                            <li><img src="image/slide3.jpg" width="180px" height="220px"/></li>
+                            <li class="encabezadoproducto">Blusa</li>
+                            <li class="rosadoprecio">$10.99</li>
+                            <li>Material: Tela</li>
+                            <li>Color: Amarillo</li>
+                            <li>Procedencia: Brasil</li>
+                            <li class="rosaprecio"><a href="#" class="botonproducto">Comprar</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="producto4" class="col-2 ropaproducto">
+                    <div class="productoropa1">
+                        <ul class="productoropa">
+                            <li><img src="image/slide4.jpg" width="180px" height="220px"/></li>
+                            <li class="encabezadoproducto">Blusa</li>
+                            <li class="rosadoprecio">$12.99</li>
+                            <li>Material: Tela</li>
+                            <li>Color: Azul</li>
+                            <li>Procedencia: Colombia</li>
+                            <li class="rosaprecio"><a href="#" class="botonproducto">Comprar</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="producto5" class="col-2 ropaproducto">
+                    <div class="productoropa1">
+                        <ul class="productoropa">
+                            <li><img src="image/slide5.jpg" width="180px" height="220px"/></li>
+                            <li class="encabezadoproducto">Blusa</li>
+                            <li class="rosadoprecio">$9.99</li>
+                            <li>Material: Tela</li>
+                            <li>Color: Gris</li>
+                            <li>Procedencia: Colombia</li>
+                            <li class="rosaprecio"><a href="#" class="botonproducto">Comprar</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="producto6" class="col-2 ropaproducto">
+                    <div class="productoropa1">
+                        <ul class="productoropa">
+                            <li><img src="image/slide6.jpg" width="180px" height="220px"/></li>
+                            <li class="encabezadoproducto">Sueter</li>
+                            <li class="rosadoprecio">$14.99</li>
+                            <li>Material: Lana</li>
+                            <li>Color: Blanco</li>
+                            <li>Procedencia: Argentina</li>
+                            <li class="rosaprecio"><a href="#" class="botonproducto">Comprar</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="piedepagina">
+            
+        </footer>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
